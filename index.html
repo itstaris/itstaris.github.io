@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VIDENS</title>
+  <meta name="description" content="Um jogo de cartas narrativo inspirado em videntes">
+  <meta name="theme-color" content="#000000">
+
+  <!-- TROCAR: imagem de compartilhamento (redes sociais) -->
+  <!-- <meta property="og:image" content="assets/og-image.jpg"> -->
+  <!-- <link rel="icon" href="assets/favicon.png"> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;600&family=Jaini&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="topo">
+    <div class="header-inner">
+      <a class="logo" href="#inicio" aria-label="Nome do jogo — voltar ao início">
+        <!-- TROCAR: <img src="assets/logo.svg" alt="Nome do jogo"> -->
+        <img src="assets/logotipo.svg" alt="Videns">
+      </a>
+
+      <nav class="nav" id="menu" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#jogo">O jogo</a></li>
+          <li><a href="#universo">Universo</a></li>
+          <li><a href="#como-jogar">Como jogar</a></li>
+          <li><a href="#bastidores">Bastidores</a></li>
+          <li><a href="#projeto">Sobre o projeto</a></li>
+          <li class="nav-buy"><a class="btn btn--solid btn--small" href="#comprar">Comprar</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <!-- TROCAR: imagem ou vídeo de fundo. Para vídeo: <video class="media" autoplay muted loop playsinline poster="assets/hero.jpg"><source src="assets/hero.mp4" type="video/mp4"></video> -->
+      <div class="media ph hero-bg" role="img" aria-label="Espaço reservado para imagem de fundo do universo do jogo">
+        <span class="ph-label">IMAGEM / VÍDEO DE FUNDO DO HERO<br><small>1920×1080 ou maior</small></span>
+      </div>
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="hero-content wrap">
+        <p class="eyebrow">Jogo de cartas narrativo</p>
+        <h1 id="hero-titulo" class="display">AS CARTAS NÃO<br>MENTEM...</h1>
+        <p class="lead">Entre na barraca das deusas do destino e encare seu futuro...</p>
+        <div class="btn-row">
+          <a class="btn btn--solid" href="#jogo">Conhecer o jogo</a>
+          <a class="btn btn--line" href="#universo">Entrar na barraca</a>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#jogo" aria-label="Rolar para a próxima seção"><span></span></a>
+    </section>
+
+    <!-- ============ APRESENTAÇÃO DO JOGO ============ -->
+    <section class="section section--ink" id="jogo" aria-labelledby="jogo-titulo">
+      <div class="wrap editorial">
+        <div class="editorial-text reveal">
+          <p class="eyebrow">01 — O jogo</p>
+          <h2 id="jogo-titulo" class="display">O QUE É<br>VIDENS</h2>
+          <p class="lead">Um jogo de cartas inspirado em videntes</p>
+          <p>Videns é um jogo de cartas de narrativa aberta: um jogador é o viajante em busca do seu destino, e os outros são as deusas que leem seu futuro por meio da combinação de cartas.<br>As cartas oferecem pistas, símbolos e possibilidades de futuro, mas nunca a história pronta. Cabe a quem joga interpretar, conectar e decidir qual versão do destino é mais convincente, seja pela razão ou pela vontade de acreditar.</p>
+          <ul class="facts" aria-label="Informações rápidas">
+            <!-- TROCAR/REMOVER conforme os dados existirem -->
+            <li><strong>3-5</strong><span>jogadores</span></li>
+            <li><strong>30-60 min</strong><span>de duração</span></li>
+            <li><strong>10+</strong><span>idade</span></li>
+          </ul>
+        </div>
+        <figure class="editorial-media editorial-media--tall reveal">
+          <!-- TROCAR: <img class="media" src="assets/jogo-01.jpg" alt="Descreva a imagem"> -->
+          <div class="media ph" role="img" aria-label="Espaço reservado para imagem das cartas ou do baralho">
+            <span class="ph-label">IMAGEM — CARTAS / BARALHO<br><small>vertical, 4:5</small></span>
+          </div>
+          <figcaption>TROCAR: legenda opcional.</figcaption>
+        </figure>
+      </div>
+
+      <div class="wrap editorial editorial--reverse">
+        <figure class="editorial-media reveal">
+          <!-- TROCAR: <img class="media" src="assets/jogo-02.jpg" alt="Descreva a imagem"> -->
+          <div class="media ph" role="img" aria-label="Espaço reservado para segunda imagem do jogo">
+            <span class="ph-label">IMAGEM — DETALHE DAS CARTAS<br><small>horizontal, 4:3</small></span>
+          </div>
+        </figure>
+        <div class="editorial-text reveal">
+          <h3 class="display display--s">ESCOLHA SEU<br>DESTINO</h3>
+          <p>Aqui ninguém é dono da história. As regras criam o cenário e o jogo acontece nas escolhas e interpretações de cada jogador.</p>
+          <blockquote class="pull">TROCAR: frase curta de destaque, em citação.</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ UNIVERSO ============ -->
+    <section class="section section--immersive" id="universo" aria-labelledby="universo-titulo">
+      <div class="media ph immersive-bg" role="img" aria-label="Espaço reservado para ilustração ampla do universo do jogo">
+        <span class="ph-label">ILUSTRAÇÃO AMPLA DO UNIVERSO<br><small>fundo da seção, 1920×1200</small></span>
+      </div>
+      <div class="hero-shade hero-shade--deep" aria-hidden="true"></div>
+
+      <div class="wrap immersive-content">
+        <div class="reveal">
+          <p class="eyebrow">02 — Universo</p>
+          <h2 id="universo-titulo" class="display">A BARRACA<br>DO DESTINO</h2>
+          <p class="lead">"Durante séculos, viajantes de todos os tipos relataram ter visto uma barraca cuja origem ninguém soube explicar. Ela traz uma sensação de mistério e perigo, mas algo atrai quem passa por perto. Mesmo sem saber o que é, quem entra reconhece na hora: está diante das deusas do destino..."</p>
+        </div>
+
+        <div class="lore">
+          <article class="lore-item reveal">
+            <div class="media ph" role="img" aria-label="Espaço reservado para ilustração de elemento simbólico 1">
+              <span class="ph-label">ILUSTRAÇÃO<br><small>elemento simbólico 1</small></span>
+            </div>
+            <h3>NOME DO ELEMENTO</h3>
+            <p>TROCAR: texto curto sobre o elemento simbólico.</p>
+          </article>
+          <article class="lore-item lore-item--down reveal">
+            <div class="media ph" role="img" aria-label="Espaço reservado para ilustração de elemento simbólico 2">
+              <span class="ph-label">ILUSTRAÇÃO<br><small>elemento simbólico 2</small></span>
+            </div>
+            <h3>NOME DO ELEMENTO</h3>
+            <p>TROCAR: texto curto sobre o elemento simbólico.</p>
+          </article>
+          <article class="lore-item reveal">
+            <div class="media ph" role="img" aria-label="Espaço reservado para ilustração de elemento simbólico 3">
+              <span class="ph-label">ILUSTRAÇÃO<br><small>elemento simbólico 3</small></span>
+            </div>
+            <h3>NOME DO ELEMENTO</h3>
+            <p>TROCAR: texto curto sobre o elemento simbólico.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMPONENTES E COMO JOGAR ============ -->
+    <section class="section section--ink" id="como-jogar" aria-labelledby="jogar-titulo">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">03 — Como jogar</p>
+          <h2 id="jogar-titulo" class="display">COMPONENTES<br>E REGRAS</h2>
+          <p class="lead">TROCAR: introdução curta sobre o que há na caixa e como uma partida funciona.</p>
+        </header>
+
+        <h3 class="sub-title reveal">NA CAIXA</h3>
+        <ul class="components">
+          <li class="reveal">
+            <img class="media" src="assets/verso_destino.png" alt="Carta de destino" loading="lazy">
+            <h4>CARTA DE DESTINO<em>×24</em></h4>
+            <p>TROCAR: função desse tipo de carta.</p>
+          </li>
+          <li class="reveal">
+            <img class="media" src="assets/verso_ato.png" alt="Carta de ato" loading="lazy">
+            <h4>CARTA DE ATO<em>×24</em></h4>
+            <p>TROCAR: função desse tipo de carta.</p>
+          </li>
+          <li class="reveal">
+            <img class="media" src="assets/verso_manifestacoes.png" alt="Carta de manifestação" loading="lazy">
+            <h4>CARTA DE MANIFESTAÇÃO<em>×24</em></h4>
+            <p>TROCAR: função desse tipo de carta.</p>
+          </li>
+          <li class="reveal">
+            <img class="media" src="assets/verso_visoes.png" alt="Carta de visão" loading="lazy">
+            <h4>CARTA DE VISÃO<em>×24</em></h4>
+            <p>TROCAR: função desse componente.</p>
+          </li>
+          <li class="reveal">
+            <img class="media" src="assets/carta_oferenda.png" alt="Carta de ofenda" loading="lazy">
+            <h4>CARTA DE OFERENDA<em>×24</em></h4>
+            <p>TROCAR: função desse tipo de carta.</p>
+          </li>
+        </ul>
+
+        <h3 class="sub-title reveal">UMA PARTIDA, EM ETAPAS</h3>
+        <ol class="steps">
+          <li class="reveal">
+            <span class="step-n" aria-hidden="true">1</span>
+            <div><h4>CHEGADA DO VIAJANTE</h4><p>O viajante se introduz e revela o que deseja saber</p></div>
+          </li>
+          <li class="reveal">
+            <span class="step-n" aria-hidden="true">2</span>
+            <div><h4>LEITURA DAS DEUSAS</h4><p>Cada deusa revela sua profecia baseada na combinação de suas cartas</p></div>
+          </li>
+          <li class="reveal">
+            <span class="step-n" aria-hidden="true">3</span>
+            <div><h4>DISCUSSÃO</h4><p>As deusas podem fortalecer suas próprias leituras ou questionar as das outras</p></div>
+          </li>
+          <li class="reveal">
+            <span class="step-n" aria-hidden="true">4</span>
+            <div><h4>DECISÃO</h4><p>Cabe ao viajante decidir qual história foi a mais convincente, emocionante ou engraçada</p></div>
+          </li>
+        </ol>
+
+        <div class="example reveal">
+          <div class="example-text">
+            <h3 class="sub-title">COMBINAÇÃO DE CARTAS</h3>
+            <p>TROCAR: explique como as cartas se combinam para formar um trecho de história.</p>
+          </div>
+          <div class="example-media">
+            <div class="media ph" role="img" aria-label="Espaço reservado para exemplo visual de cartas combinadas">
+              <span class="ph-label">IMAGEM — CARTAS COMBINADAS<br><small>horizontal, 16:9</small></span>
+            </div>
+          </div>
+        </div>
+
+        <p class="manual reveal">
+          <!-- TROCAR: href do manual em PDF, ex.: assets/manual.pdf. Remova este parágrafo se não houver manual. -->
+          <a class="btn btn--line" href="#" data-placeholder-link>Baixar o manual completo (PDF)</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ BASTIDORES ============ -->
+    <section class="section section--archive" id="bastidores" aria-labelledby="bastidores-titulo">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">04 — Bastidores</p>
+          <h2 id="bastidores-titulo" class="display">DOS RASCUNHOS<br>ÀS CARTAS</h2>
+          <p class="lead">TROCAR: texto sobre a história do desenvolvimento do jogo.</p>
+        </header>
+
+        <div class="archive">
+          <figure class="note note--a reveal">
+            <span class="tape" aria-hidden="true"></span>
+            <div class="media ph" role="img" aria-label="Espaço reservado para rascunho ou estudo preliminar">
+              <span class="ph-label">RASCUNHO<br><small>estudo preliminar</small></span>
+            </div>
+            <figcaption><b>FIG. 01</b> TROCAR: legenda.</figcaption>
+          </figure>
+          <figure class="note note--b reveal">
+            <span class="tape" aria-hidden="true"></span>
+            <div class="media ph" role="img" aria-label="Espaço reservado para referência visual">
+              <span class="ph-label">REFERÊNCIA<br><small>conceitual ou visual</small></span>
+            </div>
+            <figcaption><b>FIG. 02</b> TROCAR: legenda.</figcaption>
+          </figure>
+          <figure class="note note--c reveal">
+            <span class="tape" aria-hidden="true"></span>
+            <div class="media ph" role="img" aria-label="Espaço reservado para foto de protótipo">
+              <span class="ph-label">PROTÓTIPO<br><small>foto do teste</small></span>
+            </div>
+            <figcaption><b>FIG. 03</b> TROCAR: legenda.</figcaption>
+          </figure>
+          <figure class="note note--d reveal">
+            <span class="tape" aria-hidden="true"></span>
+            <div class="media ph" role="img" aria-label="Espaço reservado para teste de jogabilidade">
+              <span class="ph-label">TESTE DE JOGABILIDADE<br><small>foto ou registro</small></span>
+            </div>
+            <figcaption><b>FIG. 04</b> TROCAR: legenda.</figcaption>
+          </figure>
+        </div>
+
+        <div class="compare reveal">
+          <div class="compare-text">
+            <h3 class="sub-title">DA VERSÃO INICIAL À FINAL</h3>
+            <p>TROCAR: texto sobre a evolução da identidade visual e das cartas. Arraste o controle para comparar.</p>
+          </div>
+          <div class="compare-box" data-compare>
+            <div class="media ph compare-after" role="img" aria-label="Espaço reservado para a versão final da carta">
+              <span class="ph-label">VERSÃO FINAL</span>
+            </div>
+            <div class="media ph compare-before" role="img" aria-label="Espaço reservado para a versão inicial da carta">
+              <span class="ph-label">VERSÃO INICIAL</span>
+            </div>
+            <span class="compare-line" aria-hidden="true"></span>
+            <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Comparar versão inicial e final">
+          </div>
+        </div>
+
+        <h3 class="sub-title reveal">DECISÕES DE DESIGN</h3>
+        <dl class="decisions">
+          <div class="reveal"><dt>DECISÃO 01</dt><dd>TROCAR: explique uma decisão de design importante e o porquê dela.</dd></div>
+          <div class="reveal"><dt>DECISÃO 02</dt><dd>TROCAR: explique uma decisão de design importante e o porquê dela.</dd></div>
+          <div class="reveal"><dt>DECISÃO 03</dt><dd>TROCAR: explique uma decisão de design importante e o porquê dela.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE O PROJETO ============ -->
+    <section class="section section--ink" id="projeto" aria-labelledby="projeto-titulo">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">05 — Sobre o projeto</p>
+          <h2 id="projeto-titulo" class="display">O TCC POR<br>TRÁS DO JOGO</h2>
+        </header>
+
+        <div class="research">
+          <div class="research-q reveal">
+            <p class="eyebrow">Questão de pesquisa</p>
+            <p class="question">Como o game designer pode guiar a experiência de um jogo aberto por meio das regras, sem determinar o resultado e preservando a liberdade criativa de quem joga?</p>
+          </div>
+          <div class="research-text reveal">
+            <p>Videns é o produto prático de um TCC de Design Digital que investiga o papel do game designer em jogos abertos. O jogo é, ao mesmo tempo, produto e objeto de estudo: cada regra foi pensada para orientar a experiência sem fechar a história.</p>
+            <p>TROCAR: breve descrição da metodologia e do processo de desenvolvimento.</p>
+            <p class="small">FACAMP · Design Digital · 4°ano</p>
+            <!-- TROCAR: href do trabalho completo. Remova se ainda não estiver disponível. -->
+            <a class="btn btn--line" href="#" data-placeholder-link>Ler o trabalho completo</a>
+          </div>
+        </div>
+
+        <h3 class="sub-title reveal">DESENVOLVEDORES</h3>
+        <ul class="team">
+          <li class="reveal">
+            <div class="media ph" role="img" aria-label="Espaço reservado para foto do integrante 1">
+              <span class="ph-label">FOTO<br><small>integrante 1</small></span>
+            </div>
+            <h4>ARTÊMIO NETO</h4>
+            <p class="role">Game Designer</p>
+            <p class="links"><a href="#" data-placeholder-link>Portfólio</a> · <a href="#" data-placeholder-link>LinkedIn</a></p>
+          </li>
+          <li class="reveal">
+            <div class="media ph" role="img" aria-label="Espaço reservado para foto do integrante 2">
+              <span class="ph-label">FOTO<br><small>integrante 2</small></span>
+            </div>
+            <h4>TAMIRES INOUEO</h4>
+            <p class="role">Ilustradora</p>
+            <p class="links"><a href="#" data-placeholder-link>Portfólio</a> · <a href="#" data-placeholder-link>LinkedIn</a></p>
+          </li>
+          <!-- Para adicionar mais integrantes, copie um bloco <li> inteiro -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ COMPRA ============ -->
+    <section class="section section--buy" id="comprar" aria-labelledby="comprar-titulo">
+      <div class="wrap buy">
+        <div class="buy-media reveal">
+          <!-- TROCAR: <img class="media" src="assets/produto.jpg" alt="Caixa do jogo"> -->
+          <div class="media ph" role="img" aria-label="Espaço reservado para imagem do produto">
+            <span class="ph-label">IMAGEM DO PRODUTO<br><small>caixa / baralho</small></span>
+          </div>
+          <div class="stamp" aria-hidden="true"><span>TROCAR<br>SELO</span></div>
+        </div>
+        <div class="buy-text reveal">
+          <p class="eyebrow">06 — Leve para a mesa</p>
+          <h2 id="comprar-titulo" class="display">NOME<br>DO JOGO</h2>
+          <p class="lead">TROCAR: breve chamada para ação.</p>
+          <p class="price"><strong>R$ 00,00</strong> <span>TROCAR: disponibilidade (ex.: em estoque, pré-venda)</span></p>
+          <!-- TROCAR: href do link de compra na plataforma externa -->
+          <a class="btn btn--solid btn--big" href="#" data-placeholder-link>Comprar o jogo</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <span class="logo-ph">LOGO DO JOGO</span>
+        <p class="small">TROCAR: frase curta de rodapé.</p>
+      </div>
+
+      <nav aria-label="Navegação do rodapé">
+        <h2 class="footer-title">NAVEGAR</h2>
+        <ul>
+          <li><a href="#jogo">O jogo</a></li>
+          <li><a href="#universo">Universo</a></li>
+          <li><a href="#como-jogar">Como jogar</a></li>
+          <li><a href="#bastidores">Bastidores</a></li>
+          <li><a href="#projeto">Sobre o projeto</a></li>
+          <li><a href="#comprar">Comprar</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="footer-title">CONTATO</h2>
+        <ul>
+          <li><a href="#" data-placeholder-link>email@exemplo.com</a></li>
+          <li><a href="#" data-placeholder-link>Instagram</a></li>
+          <li><a href="#" data-placeholder-link>Outra rede</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+      <p class="small">TROCAR: créditos de desenvolvimento · instituição · curso · ano</p>
+      <p class="small">© 0000 NOME DO JOGO. TROCAR: texto de direitos autorais.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

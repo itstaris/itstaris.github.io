@@ -203,10 +203,26 @@ p + p { margin-top: 1em; }
   display: block; background: transparent; margin-inline: auto;
 }
 
+.editorial-media--tall img {
+  width: min(100%, 860px);
+  max-height: 760px;
+}
+
+.editorial--reverse .editorial-media .media--quote {
+  width: min(100%, 780px);
+  max-height: 700px;
+}
+
 @media (max-width: 960px) {
   .editorial-media img {
     width: min(100%, 520px);
     max-height: 440px;
+  }
+
+  .editorial-media--tall img,
+  .editorial--reverse .editorial-media .media--quote {
+    width: min(100%, 620px);
+    max-height: 560px;
   }
 }
 
@@ -214,6 +230,12 @@ p + p { margin-top: 1em; }
   .editorial-media img {
     width: min(100%, 420px);
     max-height: 320px;
+  }
+
+  .editorial-media--tall img,
+  .editorial--reverse .editorial-media .media--quote {
+    width: min(100%, 420px);
+    max-height: 400px;
   }
 }
 

@@ -106,11 +106,8 @@ p + p { margin-top: 1em; }
 .ph {
   position: relative; display: grid; place-items: center; text-align: center;
   min-height: 160px;
-  background:
-    linear-gradient(to top right, transparent calc(50% - .5px), var(--white-15) 50%, transparent calc(50% + .5px)),
-    linear-gradient(to top left, transparent calc(50% - .5px), var(--white-15) 50%, transparent calc(50% + .5px)),
-    #111;
-  border: 1px dashed var(--white-40);
+  background: transparent;
+  border: 0;
 }
 .ph-label {
   position: relative; background: var(--black); padding: 8px 14px;
@@ -256,6 +253,18 @@ figcaption { font-size: .8rem; letter-spacing: .06em; color: var(--white-70); ma
 .lore-item--down { margin-top: clamp(0px, 7vw, 96px); }
 .lore-item h3 { font-size: 1.9rem; margin-bottom: 8px; }
 .lore-item p { color: var(--white-70); max-width: 22em; }
+.lore-item .media {
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+}
+.lore-item .media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background: transparent;
+}
 
 /* Componentes e regras */
 .components { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(18px, 2vw, 28px); margin-bottom: clamp(48px, 7vw, 92px); align-items: start; }

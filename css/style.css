@@ -347,26 +347,27 @@ figcaption { font-size: .8rem; letter-spacing: .06em; color: var(--white-70); ma
   -webkit-overflow-scrolling: touch;
   touch-action: pan-x;
   scrollbar-width: thin;
+  white-space: nowrap;
 }
 .example-media .ph {
-  width: max-content;
+  width: auto;
   max-width: none;
-  min-width: 420px;
+  min-width: 0;
   background: none;
   border: 0;
   padding: 0;
-  display: block;
+  display: inline-block;
   overflow: visible;
+  white-space: nowrap;
 }
 .example-media img {
   display: block;
-  width: auto;
-  max-width: none;
-  min-width: 420px;
-  max-height: 420px;
+  width: min(46vw, 540px);
+  max-width: 100%;
   height: auto;
   object-fit: contain;
   border-radius: 0;
+  flex: 0 0 auto;
 }
 .manual { margin-top: 56px; }
 
@@ -386,10 +387,8 @@ figcaption { font-size: .8rem; letter-spacing: .06em; color: var(--white-70); ma
     padding-inline: var(--gutter);
   }
 
-  .example-media .ph,
   .example-media img {
-    min-width: 520px;
-    max-height: 320px;
+    width: min(78vw, 320px);
   }
 }
 

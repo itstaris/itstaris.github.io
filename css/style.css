@@ -354,11 +354,11 @@ figcaption { font-size: .8rem; letter-spacing: .06em; color: var(--white-70); ma
   min-width: 100%;
   max-width: none;
   min-height: 360px;
-  background: none; border: 0; padding: 0; display: block; overflow: hidden;
+  background: none; border: 0; padding: 0; display: block; overflow: visible;
 }
 .example-media img {
   width: auto;
-  max-width: 920px;
+  max-width: none;
   min-width: 420px;
   height: auto;
   object-fit: contain;
@@ -373,6 +373,18 @@ figcaption { font-size: .8rem; letter-spacing: .06em; color: var(--white-70); ma
   .buy,
   .compare {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .example-media {
+    margin-inline: calc(var(--gutter) * -1);
+    width: calc(100% + (var(--gutter) * 2));
+    padding-inline: var(--gutter);
+  }
+
+  .example-media img {
+    min-width: 520px;
   }
 }
 

@@ -12,40 +12,35 @@
   var menu = document.getElementById('menu');
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- Header: fundo ao rolar ---------- */
-  function onScroll() {
-    header.classList.toggle('is-scrolled', window.scrollY > 24);
-  }
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-  /* ---------- Menu mobile ---------- */
-  function setMenu(open) {
-    toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
-    menu.classList.toggle('is-open', open);
-    header.classList.toggle('menu-open', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  }
-
-  toggle.addEventListener('click', function () {
-    setMenu(toggle.getAttribute('aria-expanded') !== 'true');
-  });
-
-  menu.addEventListener('click', function (e) {
-    if (e.target.closest('a')) setMenu(false);
-  });
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
-      setMenu(false);
-      toggle.focus();
+  if (toggle && menu) {
+    function setMenu(open) {
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+      menu.classList.toggle('is-open', open);
+      header.classList.toggle('menu-open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
     }
-  });
 
-  window.matchMedia('(min-width: 961px)').addEventListener('change', function (e) {
-    if (e.matches) setMenu(false);
-  });
+    toggle.addEventListener('click', function () {
+      var isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      setMenu(!isOpen);
+    });
+
+    menu.addEventListener('click', function (e) {
+      if (e.target.closest('a')) setMenu(false);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        setMenu(false);
+        toggle.focus();
+      }
+    });
+
+    window.matchMedia('(min-width: 961px)').addEventListener('change', function (e) {
+      if (e.matches) setMenu(false);
+    });
+  }
 
   /* ---------- Link ativo no menu (scrollspy) ---------- */
   var links = Array.prototype.slice.call(menu.querySelectorAll('a[href^="#"]:not(.btn)'));

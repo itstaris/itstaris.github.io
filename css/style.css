@@ -339,30 +339,32 @@ figcaption { font-size: .8rem; letter-spacing: .06em; color: var(--white-70); ma
 }
 .example .sub-title { margin-top: 0; }
 .example-media {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  display: block;
   overflow-x: auto;
   overflow-y: hidden;
-  padding-bottom: 8px;
   -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  scrollbar-width: thin;
 }
-.example-media .ph, .example-media img { aspect-ratio: 16 / 9; }
 .example-media .ph {
   width: max-content;
-  min-width: 100%;
   max-width: none;
-  min-height: 360px;
-  background: none; border: 0; padding: 0; display: block; overflow: visible;
+  min-width: 620px;
+  background: none;
+  border: 0;
+  padding: 0;
+  display: block;
+  overflow: visible;
 }
 .example-media img {
+  display: block;
   width: auto;
   max-width: none;
-  min-width: 420px;
+  min-width: 620px;
   height: auto;
   object-fit: contain;
-  display: block;
   border-radius: 0;
 }
 .manual { margin-top: 56px; }
@@ -383,8 +385,9 @@ figcaption { font-size: .8rem; letter-spacing: .06em; color: var(--white-70); ma
     padding-inline: var(--gutter);
   }
 
+  .example-media .ph,
   .example-media img {
-    min-width: 520px;
+    min-width: 720px;
   }
 }
 

@@ -325,18 +325,56 @@ figcaption { font-size: .8rem; letter-spacing: .06em; color: var(--white-70); ma
 .steps p { color: var(--white-70); }
 
 .example { display: grid; grid-template-columns: 1fr 1.5fr; gap: clamp(24px, 5vw, 72px); align-items: center; margin-top: clamp(56px, 8vw, 96px); }
+.example-text {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.example-text b,
+.example-text p {
+  display: block;
+  max-width: 100%;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
 .example .sub-title { margin-top: 0; }
-.example-media { display: flex; align-items: center; justify-content: center; }
+.example-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
+}
 .example-media .ph, .example-media img { aspect-ratio: 16 / 9; }
 .example-media .ph {
-  width: min(100%, 920px);
+  width: max-content;
+  min-width: 100%;
+  max-width: none;
   min-height: 360px;
   background: none; border: 0; padding: 0; display: block; overflow: hidden;
 }
 .example-media img {
-  width: 100%; height: auto; object-fit: contain; display: block; border-radius: 0;
+  width: auto;
+  max-width: 920px;
+  min-width: 420px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 0;
 }
 .manual { margin-top: 56px; }
+
+@media (max-width: 960px) {
+  .example,
+  .research,
+  .buy,
+  .compare {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* Bastidores — estética de arquivo */
 .section--archive { border-block: 1px solid var(--white-15); }
